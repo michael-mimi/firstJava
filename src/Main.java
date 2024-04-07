@@ -1,4 +1,5 @@
-
+import java.io.File;
+import java.io.FileWriter;
 
 public class Main {
 
@@ -15,48 +16,65 @@ public class Main {
         // Clip clip;
         // Scanner scanner = new Scanner(System.in);
         // String response = "";
-        // File file = new File("src/solitude-dark-ambient-electronic-197737 (online-audio-converter.com).wav");
+        // File file = new File("src/solitude-dark-ambient-electronic-197737
+        // (online-audio-converter.com).wav");
         // try {
-        //     audioStream = AudioSystem.getAudioInputStream(file);
-        //     clip = AudioSystem.getClip();
-        //     clip.open(audioStream);
-        //     while (!response.equals("Q")) {
-        //         System.out.println("P = play, S = Stop, R = reset, Q = quit");
-        //         System.out.print("Enter your choice:");
+        // audioStream = AudioSystem.getAudioInputStream(file);
+        // clip = AudioSystem.getClip();
+        // clip.open(audioStream);
+        // while (!response.equals("Q")) {
+        // System.out.println("P = play, S = Stop, R = reset, Q = quit");
+        // System.out.print("Enter your choice:");
 
-        //         response = scanner.next();
-        //         response = response.toUpperCase();
+        // response = scanner.next();
+        // response = response.toUpperCase();
 
-        //         switch (response) {
-        //             case "P":
-        //                 clip.start();
-        //                 break;
+        // switch (response) {
+        // case "P":
+        // clip.start();
+        // break;
 
-        //             case "S":
-        //                 clip.stop();
-        //                 break;
+        // case "S":
+        // clip.stop();
+        // break;
 
-        //             case "R":
-        //                 clip.setFramePosition(0);
-        //                 break;
+        // case "R":
+        // clip.setFramePosition(0);
+        // break;
 
-        //             case "Q":
-        //                 clip.close();
-        //                 break;
+        // case "Q":
+        // clip.close();
+        // break;
 
-        //             default:
-        //                 System.out.println("Not a valid response");
-                        
-        //         }
-        //     }
-        //     System.out.println("Byeeee!");
+        // default:
+        // System.out.println("Not a valid response");
+
+        // }
+        // }
+        // System.out.println("Byeeee!");
 
         // } catch (Exception e) {
-        //     System.err.println(e);
+        // System.err.println(e);
         // }
 
-        MyFrame frame = new MyFrame();
+        // MyFrame frame = new MyFrame();
+
+        File file = new File("src/secret_message.txt");
+        if (file.exists()) {
+            System.out.println("That file exists! :O!");
+            System.out.println(file.getAbsolutePath());
+        } else {
+            System.out.println("That file doesn't exist :(");
+        }
+        try {
+            FileWriter writer = new FileWriter(file);
+            writer.write("Now it's the new beginning!Horray!");
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         
+
     }
 
 }
