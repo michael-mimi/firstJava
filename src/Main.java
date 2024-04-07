@@ -1,9 +1,4 @@
-import java.awt.Color;
-import java.io.File;
-import java.util.*;
-import javax.sound.sampled.*;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
+
 
 public class Main {
 
